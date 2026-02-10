@@ -1,0 +1,77 @@
+Project Title:Library login form
+1.Introduction:
+1.1 Purpose
+The purpose of this document is to define the requirements for the Library Login Form system. The login form will provide secure authentication for library users, enabling them to access personalized services such as borrowing records, book reservations, and digital resources. It ensures that only authorized members can interact with the library’s system, thereby protecting sensitive data and maintaining resource integrity.
+1.2 Scope
+The Library Login Form is a module within the larger Library Management System. It will allow users (students, faculty, and staff) to log in using unique credentials. Once authenticated, users can perform tasks such as viewing their account details, renewing borrowed items, and accessing restricted digital content. The system will also support administrative functions like monitoring user activity and managing accounts.
+1.3 Definitions, Acronyms, and Abbreviations
+LMS – Library Management System
+Authentication – The process of verifying user identity
+Credentials – Username and password used for login
+1.4 References
+University IT Security Guidelines
+IEEE SRS Standard (IEEE 830-1998)
+Library Management System Design Document
+2.Overall Description
+2.1 Product Perspective
+The login form is a front-end entry point for the library management system.It serves as the authentication gateway, ensuring only authorized users (students, faculty, staff, or administrators) can access library resources.The form integrates with the library’s user database and authentication service.
+2.2 Product Functions
+User Authentication: Validate credentials (username/email and password).
+Role-Based Access: Differentiate between user types (e.g., student vs. librarian).
+Password Recovery: Provide a "Forgot Password" option.
+Session Management: Maintain secure sessions after login.
+Error Handling: Display clear messages for invalid credentials or system errors.
+2.3 User Characteristics
+Users may have varying technical skills, from novice students to experienced staff.
+The interface must be simple, intuitive, and accessible.
+Users expect fast response times and clear instructions.
+2.4 Constraints
+Must comply with security standards (e.g., encrypted password storage, HTTPS).
+Should be compatible across browsers and devices (desktop, mobile).
+Must support multi-language options if required by the institution.
+3.System Features 
+ 
+4.External Interface Requirements
+4.1 User Interface
+The login form must be simple, intuitive, and responsive.
+Fields required:
+Username/Email input field
+Password input field (masked for security)
+Login button
+Forgot Password link
+Error messages must be clear and user-friendly (e.g., “Invalid username or password”).
+The interface should be accessible across desktop, tablet, and mobile devices.
+ 4.2 Hardware Interfaces
+The system should run on standard computing devices (PCs, laptops, smartphones).
+No specialized hardware is required beyond a device with internet access.
+Minimum requirements:
+1 GB RAM
+Modern web browser support
+4.3 Software Interfaces
+The login form must integrate with:
+Library Database (for user credentials and roles).
+Authentication Server (for secure login validation).
+Email/SMS Service (for password recovery).
+Must support HTTPS protocol for secure communication.
+ 4.4 Communication Interfaces
+The system communicates over TCP/IP using HTTPS.
+Error logs and authentication attempts should be recorded in the system log files.
+Password recovery requests must be transmitted securely via encrypted channels
+5.Non-Functional Requirements
+Performance: The login page shall load within 2 seconds under normal network conditions
+Security
+user password must be encrypted in the database
+should lock the account after 3 unsuccessful attempts
+Reliability
+The login system should be available 24/7.
+It should not crash during login attempts.
+User sessions should be maintained correctly after login.
+ Scalability
+The system should support multiple users logging in at the same time.
+Performance should not degrade with increased users.
+Compatibility
+The login form should work on different browsers (Chrome, Firefox, Edge).
+It should be accessible on desktop and mobile devices.
+6.Other Requirements
+Each user must have a unique username.
+Appropriate error messages shall be displayed.
